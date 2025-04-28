@@ -24,7 +24,6 @@ class Book:
 
 
 class Rental:
-
     def __init__(self, book: Book, days_rented: int):
         self.book = book
         self.days_rented = days_rented
@@ -58,10 +57,10 @@ class Client:
             amount = rental.get_charge()
             frequent_renter_points += rental.get_frequent_renter_points()
 
-            result += f"- {rental.book.title}: {amount:.2f}\n"
+            result += f"- {rental.book.title}: {amount}\n"
             total_amount += amount
         
-        result += f"Total: {total_amount:.2f}\n"
+        result += f"Total: {total_amount}\n"
         result += f"Points: {frequent_renter_points}"
         return result
 
